@@ -1,0 +1,138 @@
+#management {
+    background-color: #d9afd9;
+    background-image: linear-gradient(62deg, #d9afd9 0%, #97d9e1 100%);
+    background-size: 200% 200%;
+    animation: changeBgColor 5s ease-in-out infinite;
+}
+
+@keyframes changeBgColor {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+#management .management-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#left-bar .left-bar-btn {
+    padding: 10px 0px;
+    color: #898989;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgb(50, 50, 50);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#left-bar .left-bar-btn:nth-child(1) {
+    border-radius: 5px 5px 0px 0px;
+}
+
+#left-bar .left-bar-btn:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+#left-bar .left-bar-btn.active {
+    color: #000;
+    background-color: orange;
+}
+
+#page {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(50, 50, 50);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#page > img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+/* table topbar */
+#management .dataTables_wrapper .topbar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#management .dataTables_wrapper select {
+    width: 100px;
+    padding: 10px;
+}
+
+/* table searchbox */
+#management .dataTables_filter {
+    flex: 1;
+}
+
+#management .dataTables_filter label {
+    width: 100%;
+}
+
+#management .dataTables_filter label input {
+    width: 100%;
+    padding: 10px;
+}
+
+#management .dataTables_wrapper thead {
+    background-color: rgb(45, 45, 45);
+    color: #fff;
+}
+
+#management .dataTables_wrapper tbody td {
+    color: #eeeeee;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+#management .dataTables_wrapper tfoot input {
+    width: 100%;
+    padding: 3px;
+    color: #eeeeee;
+}
+
+/* table pagaination */
+#management .dataTables_wrapper .pagaination {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#management #booking-request-tab {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+#management #booking-request-tab button {
+    color: #fff;
+}
+
+#management #booking-request-tab button.active {
+    background-color: orange;
+    color: #000;
+}
+
+@media only screen and (min-width: 768px) {
+    #management .management-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #left-bar {
+        width: 300px;
+    }
+}
+

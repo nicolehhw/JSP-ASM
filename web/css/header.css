@@ -1,0 +1,101 @@
+#header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: var(--header-height);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#header.active {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .nav-logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+}
+
+#header .menu {
+    position: absolute;
+    z-index: 1000;
+    top: -1000%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    transition: top 0.3s ease-in-out;
+}
+
+#header .menu.active {
+    top: 0%;
+}
+
+#header .menu a {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+#header .menu a:hover {
+    color: orange;
+}
+
+#header .menu .fa-cart-shopping,
+#header .menu .fa-bell {
+    font-size: 20px;
+}
+
+#header .menu #logout-btn i{
+    font-size: 25px;
+}
+
+#header .menu #logout-btn i:hover{
+    color: orange;
+}
+
+#header .menu-toggle-btn i {
+    font-size: 25px;
+}
+
+#header .close-menu-btn {
+    text-align: right;
+    margin: 0px 20px 0px 0px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    border-bottom: 1px solid #dddddd;
+}
+
+@media only screen and (min-width: 768px) {
+    #header .menu {
+        position: initial;
+        width: initial;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        background-color: transparent;
+    }
+
+    #header .menu-toggle-btn, #header .close-menu-btn {
+        display: none;
+    }
+}
+

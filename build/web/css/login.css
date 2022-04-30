@@ -1,0 +1,25 @@
+#login{
+    background: url("../media/background.png") no-repeat top center/cover;
+    background-color: rgb(46,46,46);
+}
+
+#login form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#login .title{
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 500px) {
+    #login form{
+        width: 450px;
+    }
+}

@@ -1,0 +1,78 @@
+#booking .booking-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+#booking .booking-details {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    overflow: hidden;
+}
+
+#booking .booking-details .img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+#booking .booking-details .details {
+    width: 90%;
+    margin: 20px;
+}
+
+#booking .booking-details .details tr td:nth-child(1) {
+    text-align: left;
+    padding: 5px 0px;
+    width: 30%;
+    font-weight: 600;
+    vertical-align: top;
+}
+
+#booking .booking-details .details tr td:nth-child(2) {
+    width: 100%;
+    text-align: center;
+}
+
+/*booking-form*/
+#booking-form{
+    flex: 0.5;
+}
+
+#booking-form .form-title {
+    display: block;
+    margin-top: 10px;
+    padding-left: 10px;
+  border-left: 5px solid orange;
+      font-size: 18px;
+  font-weight: 600;
+}
+
+#booking-form .divider{
+    display: block;
+    margin: 20px 0px;
+    height: 2px;
+    background-color: #dddddd;
+}
+
+#booking-form .booking-date-input{
+    margin: 40px 0px;
+}
+
+#booking-form .time-slot-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+    #booking .booking-wrapper{
+        flex-direction: row;
+    }
+}
